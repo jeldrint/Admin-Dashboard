@@ -9,12 +9,14 @@ body{
 }
 
 .container{
+    height: 100vh;
+    width: 100vw;
     display: grid;
-    grid-template: minmax(1vw, 1fr) 5fr / minmax(1vw, 1fr) 5fr;  
+    grid-template: minmax(100px, 1fr) 5fr / minmax(175px, 1fr) 5fr;  
 }
 
 .dashboard{
-    display: flex;
+    display: grid;
     background-color: rgb(29, 161, 242);
     grid-area: 1 / 1 / 3 / 2;
 }
@@ -26,7 +28,67 @@ body{
 }
 
 .main{
-    display: grid;
     grid-area: 2/ 2 / 3 / 3;
 
+    display: grid;
+    grid-template: 1fr / 3fr minmax(125px, 1fr);
+
+    margin: 40px 20px 50px 20px;
+}
+
+span{
+    font-weight: 700;
+}
+
+.project-box{
+    grid-area: 1 / 1 / 3 / 2;
+
+    display: grid;
+    grid-template-rows: 20px;
+
+    padding: 10px;
+}
+
+.project-box-header{
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: flex-end;
+}
+
+.project-box-content{
+    grid-area: 2 / 1 / 3 / 2;
+
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 20px;
+    
+}
+
+.project-item{
+    background-color: aliceblue;
+    border: solid 1px aliceblue;
+    box-shadow: 1px 1px 20px rgba(33, 33, 33, 0.2);
+    border-left: solid 5px rgba(213, 165, 32, 0.75);
+    border-radius: 10px;
+
+}
+
+.update-box{
+    grid-area: 1 / 2 / 2 / 3;
+
+    display: grid;
+    grid-template-rows: minmax(225px, 1fr) minmax(225px, 1fr);
+    row-gap: 20px;
+
+    padding: 10px;
+}
+
+.announcement-box, .trending-box{
+    display: grid;
+    grid-template-rows: 20px minmax(200px, 1fr);
+}
+
+.trending-box{
 }
