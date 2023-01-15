@@ -12,14 +12,65 @@ body{
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: minmax(100px, 1fr) 5fr / minmax(175px, 1fr) 5fr;  
+    grid-template: minmax(100px, 1fr) 5fr / minmax(200px, 1fr) 6fr;  
 }
 
+
+/* DASHBOARD */
 .dashboard{
-    display: grid;
     background-color: rgb(29, 161, 242);
+    color: aliceblue;
     grid-area: 1 / 1 / 3 / 2;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+    padding-top: 20px;
+
 }
+
+.dashboard-pics{
+    filter: brightness(0) invert(1);
+    width: 35px;
+}
+
+.dashboard-logo{
+    filter: brightness(0) invert(1);
+    width: 45px;
+}
+
+.dashboard-body{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    row-gap: 10px;
+}
+
+.dashboard-body-content{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.dashboard-top{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-left: 18px;
+}
+
+.dashboard-top-text{
+    font-size: 20px;
+}
+
+.dashboard-body-text{
+    font-size: 14px;
+}
+
+
+
+
 
 .header{
     display: flex;
