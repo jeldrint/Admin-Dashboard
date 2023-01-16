@@ -5,14 +5,15 @@
 }
 
 body{
-    background-color: lightgrey;
+    background-color: rgba(194, 223, 241, 0.521);
 }
 
 .container{
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: minmax(100px, 1fr) 5fr / minmax(200px, 1fr) 6fr;  
+    grid-template: minmax(150px, 1fr) 5fr / 
+    minmax(215px, 1.25fr) 5fr;  /* header-height main-height / dashboard-width main-width */
 }
 
 
@@ -71,20 +72,138 @@ body{
 
 
 
-
+/* HEADER */
 .header{
-    display: flex;
+    justify-content: space-between;
     background-color: aliceblue;
     grid-area: 1/ 2 / 2 / 3;
+
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 40px 10px 0;
+
+    display: grid;
+    grid-template: 1fr 1.5fr / 4fr 2.25fr; 
+
 }
 
+
+
+/* HEADER FIRST QUADRANT*/
+.header-firstquadrant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.search-logo{
+    width: 15px;
+    cursor: pointer;
+}
+
+.search-bar{
+    flex: 0 1 80%;
+    background-color: rgba(130, 182, 212, 0.3);
+    color: rgb(0, 89, 145);
+    border: none;
+    height: 25px;
+    border-radius: 10px;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+/* HEADER SECOND QUADRANT*/
+.header-secondquadrant{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 30px;
+}
+
+.notification-logo{
+    width: 20px;
+    cursor: pointer;
+}
+
+.profile-settings{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.settings-picture{
+    width: 30px;
+    border-radius: 15px;
+}
+
+/* HEADER THIRD QUADRANT*/
+.header-thirdquadrant{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.profile-picture{
+    width: 50px;
+    border-radius: 25px;
+    margin-left: 50px;
+}
+
+.user-handle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    row-gap: 2px;
+}
+
+.user-greeting{
+    font-size: 12px;
+}
+
+.user-name{
+    font-size: 20px;
+}
+
+
+
+
+/* HEADER FOURTH QUADRANT*/
+.header-fourthquadrant{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 15px;
+}
+
+.header-button{
+    width: 80px;
+    padding: 10px 20px;
+    border: solid 1px rgb(29, 161, 242);
+
+    background-color:rgb(29, 161, 242);
+    color: aliceblue;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+/* MAIN */
 .main{
     grid-area: 2/ 2 / 3 / 3;
 
     display: grid;
-    grid-template: 1fr / 3fr minmax(125px, 1fr);
+    grid-template: 1fr / 3fr minmax(250px, 1.5fr);
 
     margin: 40px 20px 50px 20px;
+
+    column-gap: 30px;
 }
 
 span{
@@ -96,8 +215,6 @@ span{
 
     display: grid;
     grid-template-rows: 20px;
-
-    padding: 10px;
 }
 
 .project-box-header{
@@ -110,10 +227,10 @@ span{
     grid-area: 2 / 1 / 3 / 2;
 
     display: grid;
-    grid-template-columns: minmax(250px, 1fr) repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: minmax(275px, 1fr) repeat(auto-fit, minmax(275px, 1fr));
     grid-template-rows: 1fr 1fr 1fr;
 
-    gap: 20px;
+    gap: 30px;
     
 }
 
@@ -138,7 +255,7 @@ span{
 
 .announcement-box, .trending-box{
     display: grid;
-    grid-template-rows: 20px minmax(200px, 1fr);
+    grid-template-rows: 20px minmax(200px, 1fr); /*announcement and trending box height*/
 }
 
 .trending-box{
